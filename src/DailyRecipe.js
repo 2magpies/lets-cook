@@ -2,9 +2,10 @@ import React from 'react';
 
 function DailyRecipe() {
   return (
-    <div>
-      <h1>Daily Recipe</h1>
-    </div>
+    <form className="form-horizontal">
+      <input placeholder="Search" type="text" name="searchString" required />
+      <button type="submit">Search</button>
+    </form>
   );
 }
 
