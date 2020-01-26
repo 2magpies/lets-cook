@@ -16,6 +16,11 @@ const images = [
 ];
 
 function App() {
+  const searchOptions = {
+    // key: process.env.REACT_APP_MEALDB_API_KEY,
+    api: 'https://www.themealdb.com/api/json/v1/1/search.php?f=a'
+    // endpoint: '/search'
+  };
   return (
     <div>
       <SiteInfo />

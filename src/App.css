@@ -107,3 +107,26 @@ the button and input when the browser is at least
     column-count: 4;
   }
 }
+/* .sidebar {
+  max-width: 240px;
+  border-right: 3px solid;
+  
+} */
+h1 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* .HolyGrail {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.HolyGrail-body {
+  display: flex;
+  flex: 1;
+} */
