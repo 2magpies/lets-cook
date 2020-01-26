@@ -2,30 +2,41 @@ import React, { useState, useEffect } from 'react';
 import SiteInfo from './SiteInfo';
 import DailyRecipe from './DailyRecipe';
 import SuggestedPanel from './SuggestedPanel';
+import RecipePanel from './RecipePanel';
 import './App.css';
-
-const images = [
-  {
-    id: 52768,
-    url: 'https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg'
-  },
-  {
-    id: 52893,
-    url: 'https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg'
-  }
-];
 
 function App() {
   const searchOptions = {
-    // key: process.env.REACT_APP_MEALDB_API_KEY,
-    api: 'https://www.themealdb.com/api/json/v1/1/search.php?f=a'
-    // endpoint: '/search'
+    key: process.env.REACT_APP_MEALDB_API_KEY,
+    api: 'https://www.themealdb.com/api/json/v2/',
+    endpoint: '/search.php?f='
   };
+
+  const [meals, setMeals] = useState([]);
+
+  useEffect(() => {
+    getMeals();
+  }, []);
+
+  function getMeals() {
+    const searchString = 'seafood';
+    /* Build a URL from the searchOptions object */
+    const url = `${searchOptions.api}?api_key=${searchOptions.key}${searchOptions.endpoint}&q=${searchString}`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(response => {
+        setMeals(response.data);
+      })
+      .catch(console.error);
+  }
+
   return (
     <div>
       <SiteInfo />
       <DailyRecipe />
-      <SuggestedPanel images={images} />
+      {/* <SuggestedPanel images={images} /> */}
+      <RecipePanel meals={meals} />
     </div>
   );
 }
