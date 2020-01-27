@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SiteInfo from './components/SiteInfo';
-import DailyRecipeSearch from './components/DailyRecipeSearch';
-import SuggestedPanel from './components/SuggestedPanel';
-import RecipePanel from './components/RecipePanel';
-import DailyRecipeByCategory from './components/DailyRecipeByCategory';
+import RecipeSearchForm from './components/RecipeSearchForm';
+import RecipeSearchResults from './components/RecipeSearchResults';
 import './App.css';
 
 function App() {
@@ -12,10 +10,6 @@ function App() {
     api: `https://www.themealdb.com/api/json/v2/${process.env.REACT_APP_MEALDB_API_KEY}`,
     endpoint: '/search.php?f='
   };
-
-  // const searchCategories = {
-  //   api: 'https://www.themealdb.com/api/json/v1/1/categories.php'
-  // };
 
   const [meals, setMeals] = useState([]);
   const [searchString, setSearchString] = useState('');
@@ -51,14 +45,12 @@ function App() {
   return (
     <div>
       <SiteInfo />
-      <DailyRecipeSearch
+      <RecipeSearchForm
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         searchString={searchString}
       />
-      {/* <DailyRecipeByCategory /> */}
-      {/* <SuggestedPanel images={images} /> */}
-      <RecipePanel meals={meals} />
+      <RecipeSearchResults meals={meals} />
     </div>
   );
 }

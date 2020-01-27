@@ -1,7 +1,7 @@
 import React from 'react';
 import { SearchIcon } from '../shared/AppIcons';
 
-function DailyRecipeSearch(props) {
+function RecipeSearchForm(props) {
   // Destructure props object
   const { handleSubmit, handleChange, searchString } = props;
   return (
@@ -21,4 +21,4 @@ function DailyRecipeSearch(props) {
   );
 }
 
-export default DailyRecipeSearch;
+export default RecipeSearchForm;

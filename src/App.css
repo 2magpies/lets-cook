@@ -119,13 +119,14 @@ h1 {
   padding-bottom: 15px;
 }
 
-/* .HolyGrail {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+.container {
+  display: grid;
+  grid-template-columns: 30% 35% 35%;
+  grid-template-rows: auto;
+  grid-gap: 15px 10px;
+  grid-template-areas:
+    'header header header'
+    'sidebar recipe instructions' 'footer footer footer';
+  justify-items: center;
+  align-items: start;
 }
-
-.HolyGrail-body {
-  display: flex;
-  flex: 1;
-} */
