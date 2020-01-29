@@ -72,57 +72,66 @@ input {
 
 /* some of the following referenced from: https://css-tricks.com and https://www.hongkiat.com/blog/moving-css-grid-items */
 
+/* GRID styling */
+
 .grid {
-  display: grid;
-  grid-template-areas: 'left center right';
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: row wrap;
+  /* justify-content: space-evenly; */
+  /* grid-template-areas: 'left center right';
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 5px;
+  grid-gap: 5px; */
   /* width: 360px; */
   background-color: var(--secondary);
 }
 
+.grid > * {
+  flex: 1 100%;
+}
+
 /* style banner */
 .banner {
-  grid-area: left;
-  /* grid-column: 1 / 2;
-  grid-row: 1; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
 }
 
 .siteinfo {
   background-color: var(--white);
   padding: 10px;
-  margin: 10px;
-  width: 300px;
+  margin: 5px;
+  width: auto;
   border-color: var(--primary);
   border-style: double;
-  grid-area: left;
+  /* grid-area: left;
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 2; */
 }
 .featured {
   background-color: var(--white);
   padding: 10px;
-  margin: 10px;
-  width: 350px;
+  margin: 5px;
+  width: auto;
   border-color: var(--primary);
   border-style: double;
   display: flex;
   text-align: center;
-  grid-column: 2;
-  grid-row: 1;
+  /* grid-column: 2;
+  grid-row: 1; */
 }
 .user-feature {
   background-color: var(--white);
-  padding: 10px;
-  margin: 10px;
-  width: 350px;
+  /* padding: 10px; */
+  margin: 5px;
+  width: auto;
   height: 150px;
   border-color: var(--primary);
   border-style: double;
   text-align: center;
-  grid-area: center;
+  /* grid-area: center;
   grid-column: 2;
-  grid-row: 2;
+  grid-row: 2; */
 }
 
 .user-search {
@@ -133,7 +142,7 @@ input {
   height: 125px;
   border-color: var(--primary);
   border-style: double;
-  grid-area: right;
+  /* grid-area: right;
   grid-column: 3;
-  grid-row: 1;
+  grid-row: 1; */
 }
