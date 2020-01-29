@@ -70,8 +70,8 @@ function App() {
   }
 
   return (
-    <div>
-      <Header />
+    <div className="grid">
+      <Header className="banner"/>
 
       <SiteInfo />
       <section className="user-search">
@@ -98,7 +98,7 @@ function App() {
           </div>
         )}
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

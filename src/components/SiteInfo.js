@@ -2,8 +2,8 @@ import React from 'react';
 
 function SiteInfo() {
   return (
-    <div>
-      <section className="siteinfo">
+    <div className="siteinfo">
+      <section>
       <h2> What's cooking?</h2>
       <p>
         Welcome! So, you're in the mood to whip up a fancy new dish. You've come

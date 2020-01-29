@@ -26,18 +26,6 @@ body {
   background-color: var(--secondary-light);
 }
 
-/* style banner */
-h1 {
-  font-family: 'Zhi Mang Xing', cursive;
-  font-size: 50pt;
-  font-weight: lighter;
-  text-align: center;
-  color: var(--white);
-  background-color: var(--primary);
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 h2 {
   color: var(--primary);
 }
@@ -70,29 +58,26 @@ input {
   height: 40px;
   background-color: var(--secondary-light);
 }
-.container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-items: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-}
 
-.item {
-  order: ;
-  flex: 2 1 0 auto;
-}
+/* some of the following referenced from: https://css-tricks.com */
 
-.parent {
-  display: flex;
-  height: 600px;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
 }
-
-.child {
-  width: 200px;
-  height: 200px;
-  margin: auto;
+/* style banner */
+h1 {
+  font-family: 'Zhi Mang Xing', cursive;
+  font-size: 50pt;
+  font-weight: lighter;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--primary);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  grid-column: 1 / 2;
+  grid-row: 1;
 }
 
 .siteinfo {
@@ -101,6 +86,8 @@ input {
   margin: 10px;
   border-color: var(--primary);
   border-style: double;
+  grid-column: 1 / 2;
+  grid-row: 2;
 }
 
 .user-search {
@@ -108,16 +95,22 @@ input {
   padding: 10px;
   margin: 10px;
   width: 400px;
+  height: 200px;
   border-color: var(--primary);
   border-style: double;
+  grid-column: 1;
+  grid-row: 3;
 }
 .user-feature {
   background-color: var(--white);
   padding: 10px;
   margin: 10px;
   width: 400px;
+  height: 200px;
   border-color: var(--primary);
   border-style: double;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .featured {
@@ -129,39 +122,19 @@ input {
   border-style: double;
   display: flex;
   justify-items: center;
+  grid-column: 2;
+  grid-row: 3;
 }
 
-/* following referenced from: https://css-tricks.com/snippets/css/css-grid-starter-layouts/ */
-
-.grid {
-  display: grid;
-  grid-template-columns: 150px auto 150px;
-  grid-template-rows: repeat(3, 100px);
-  grid-gap: 1em;
-}
-
-header,
+/* header,
 aside,
 article,
 footer {
   background: #eaeaea;
   padding: 1em;
-}
+} */
 
 header,
 footer {
-  grid-column: 1 / 4;
-}
-
-/* Demo Specific Styles */
-body {
-  margin: 0 auto;
-  max-width: 56em;
-  padding: 1em 0;
-}
-
-.grid > * {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  grid-column: 1 / 3;
 }
