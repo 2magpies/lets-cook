@@ -3,6 +3,7 @@ import SiteInfo from './components/SiteInfo';
 import RecipeSearchForm from './components/RecipeSearchForm';
 import RecipeSearchResults from './components/RecipeSearchResults';
 import './App.css';
+import FeaturedDish from './components/FeaturedDish';
 
 function App() {
   const searchOptions = {
@@ -60,28 +61,25 @@ function App() {
     getMeals(searchString);
   }
   return (
-    <div>
+    <div className="parent">
       <SiteInfo />
       <RecipeSearchForm
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         searchString={searchString}
       />
+      <RecipeSearchResults meals={meals} />
+      {/* {random && <FeaturedDish random={random} />} */}
       {random && (
         <div>
           <h4>Featured Dish</h4>
-          <img
-            src={random.strMealThumb}
-            alt={random.strMeal}
-            width="300"
-          />
+          <img src={random.strMealThumb} alt={random.strMeal} width="300" />
           <h3>
             {random.strArea} {random.strMeal}
           </h3>
           <p>{random.strCategory}</p>
         </div>
       )}
-      <RecipeSearchResults meals={meals} />
     </div>
   );
 }

@@ -4,7 +4,7 @@ function SiteInfo() {
   return (
     <div>
       <h1>Let's Cook!</h1>
-      <div className="sidebar">
+      <div className="child">
         <h2> What's cooking?</h2>
         <p>
           Welcome! So, you're in the mood to whip up a fancy new dish. You've

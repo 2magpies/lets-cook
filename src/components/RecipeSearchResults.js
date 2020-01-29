@@ -3,20 +3,15 @@ import React from 'react';
 const RecipeSearchResults = ({ meals }) => {
   // return early if there are no meals
   if (!meals.length) {
-    return <h2>No Recipes Found!</h2>;
+    return <h2>Look up another recipe!</h2>;
   }
   console.log(meals);
 
   return (
-    <div className="gallery">
+    <div className="child">
       {meals.map(recipe => (
         <div key={recipe.idMeal} className="thumb">
-          <img
-            src={recipe.strMealThumb}
-            alt={recipe.strMeal}
-            width="300"
-            caption={recipe.strMeal}
-          />
+          <img src={recipe.strMealThumb} alt={recipe.strMeal} width="300" />
           <h4>
             {recipe.strArea} {recipe.strMeal}
           </h4>

@@ -1,18 +1,14 @@
 import React from 'react';
 
-const FeaturedDish = ({ meals }) => {
-  // return early if there are no images
-  if (!meals.length) {
-    return <h2>No Recipe Found!</h2>;
-  }
-
+const FeaturedDish = random => {
   return (
-    <div className="featured">
-      {meals.map(dish => (
-        <div key={dish.idMeal}>
-          <img src={dish.url} alt={dish.title} width="200"/>
-        </div>
-      ))}
+    <div>
+      <h4>Featured Dish</h4>
+      <img src={random.strMealThumb} alt={random.strMeal} width="200" />
+      <h3>
+        {random.strArea} {random.strMeal}
+      </h3>
+      <p>{random.strCategory}</p>
     </div>
   );
 };
