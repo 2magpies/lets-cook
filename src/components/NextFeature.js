@@ -5,7 +5,7 @@ function NextFeature(props) {
   const { handleNext } = props;
   return (
       <div>
-          <h2>In the mood for something else?</h2>
+          <h2>Prefer something else?</h2>
     <form onSubmit={handleNext}>
       <button type="submit">Show me another Featured Dish!</button>
     </form>

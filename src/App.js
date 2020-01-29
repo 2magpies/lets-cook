@@ -71,25 +71,14 @@ function App() {
 
   return (
     <div className="grid">
-      <Header className="banner"/>
+      <Header className="banner" />
 
       <SiteInfo />
-      <section className="user-search">
-        <RecipeSearchForm
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-          searchString={searchString}
-        />
-        <RecipeSearchResults meals={meals} />
-      </section>
-      <section className="user-feature">
-        <NextFeature handleNext={handleNext} />
-      </section>
       {/* {random && <FeaturedDish random={random} />} */}
       <section className="featured">
         {random && (
           <div>
-            <h4>Featured Dish</h4>
+            <h2>Featured Dish</h2>
             <img src={random.strMealThumb} alt={random.strMeal} width="300" />
             <h3>
               {random.strArea} {random.strMeal}
@@ -98,6 +87,19 @@ function App() {
           </div>
         )}
       </section>
+      <section className="user-feature">
+        <NextFeature handleNext={handleNext} />
+      </section>
+      {/* <section className="user-search">
+        <RecipeSearchForm
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          searchString={searchString}
+        />
+        <RecipeSearchResults meals={meals} />
+      </section> */}
+      
+
       {/* <Footer /> */}
     </div>
   );

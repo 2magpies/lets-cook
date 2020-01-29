@@ -26,6 +26,17 @@ body {
   background-color: var(--secondary-light);
 }
 
+h1 {
+  font-family: 'Zhi Mang Xing', cursive;
+  font-size: 50pt;
+  font-weight: lighter;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--primary);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 h2 {
   color: var(--primary);
 }
@@ -59,34 +70,58 @@ input {
   background-color: var(--secondary-light);
 }
 
-/* some of the following referenced from: https://css-tricks.com */
+/* some of the following referenced from: https://css-tricks.com and https://www.hongkiat.com/blog/moving-css-grid-items */
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1em;
+  grid-template-areas: 'left center right';
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  /* width: 360px; */
+  background-color: var(--secondary);
 }
+
 /* style banner */
-h1 {
-  font-family: 'Zhi Mang Xing', cursive;
-  font-size: 50pt;
-  font-weight: lighter;
-  text-align: center;
-  color: var(--white);
-  background-color: var(--primary);
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  grid-column: 1 / 2;
-  grid-row: 1;
+.banner {
+  grid-area: left;
+  /* grid-column: 1 / 2;
+  grid-row: 1; */
 }
 
 .siteinfo {
   background-color: var(--white);
   padding: 10px;
   margin: 10px;
+  width: 300px;
   border-color: var(--primary);
   border-style: double;
-  grid-column: 1 / 2;
+  grid-area: left;
+  grid-column: 1;
+  grid-row: 2;
+}
+.featured {
+  background-color: var(--white);
+  padding: 10px;
+  margin: 10px;
+  width: 350px;
+  border-color: var(--primary);
+  border-style: double;
+  display: flex;
+  text-align: center;
+  grid-column: 2;
+  grid-row: 1;
+}
+.user-feature {
+  background-color: var(--white);
+  padding: 10px;
+  margin: 10px;
+  width: 350px;
+  height: 150px;
+  border-color: var(--primary);
+  border-style: double;
+  text-align: center;
+  grid-area: center;
+  grid-column: 2;
   grid-row: 2;
 }
 
@@ -95,46 +130,10 @@ h1 {
   padding: 10px;
   margin: 10px;
   width: 400px;
-  height: 200px;
+  height: 125px;
   border-color: var(--primary);
   border-style: double;
-  grid-column: 1;
-  grid-row: 3;
-}
-.user-feature {
-  background-color: var(--white);
-  padding: 10px;
-  margin: 10px;
-  width: 400px;
-  height: 200px;
-  border-color: var(--primary);
-  border-style: double;
-  grid-column: 2;
-  grid-row: 2;
-}
-
-.featured {
-  background-color: var(--white);
-  padding: 10px;
-  margin: 10px;
-  width: 400px;
-  border-color: var(--primary);
-  border-style: double;
-  display: flex;
-  justify-items: center;
-  grid-column: 2;
-  grid-row: 3;
-}
-
-/* header,
-aside,
-article,
-footer {
-  background: #eaeaea;
-  padding: 1em;
-} */
-
-header,
-footer {
-  grid-column: 1 / 3;
+  grid-area: right;
+  grid-column: 3;
+  grid-row: 1;
 }
