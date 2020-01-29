@@ -14,9 +14,14 @@ function App() {
   const [meals, setMeals] = useState([]);
   const [searchString, setSearchString] = useState('');
   const [lastSearch, setLastSearch] = useState('');
+  const [random, setRandom] = useState(null);
 
   useEffect(() => {
     getMeals(searchString);
+  }, []);
+
+  useEffect(() => {
+    getRandom();
   }, []);
 
   function getMeals(searchString) {
@@ -31,6 +36,18 @@ function App() {
         setLastSearch(searchString);
         //   Set the searchString in state to an empty string
         setSearchString('');
+      })
+      .catch(console.error);
+  }
+
+  function getRandom() {
+    /* Build a URL from the url object */
+    const randomUrl = `https://www.themealdb.com/api/json/v2/${process.env.REACT_APP_MEALDB_API_KEY}/random.php`;
+    fetch(randomUrl)
+      .then(response => response.json())
+      .then(response => {
+        setRandom(response.meals[0]);
+        console.log(response);
       })
       .catch(console.error);
   }
@@ -50,6 +67,20 @@ function App() {
         handleSubmit={handleSubmit}
         searchString={searchString}
       />
+      {random && (
+        <div>
+          <h4>Featured Dish</h4>
+          <img
+            src={random.strMealThumb}
+            alt={random.strMeal}
+            width="300"
+          />
+          <h3>
+            {random.strArea} {random.strMeal}
+          </h3>
+          <p>{random.strCategory}</p>
+        </div>
+      )}
       <RecipeSearchResults meals={meals} />
     </div>
   );

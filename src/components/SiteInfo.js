@@ -13,15 +13,12 @@ function SiteInfo() {
         </p>
         <h2>How it works</h2>
         <p>
-          See the recipe over to the right? We post a new recipe daily. We have
-          plenty of recipes to get you through a whole year of trying something
-          new. And by the time you cook your way through them, we'll have more!
           Our crowd-sourced cookbook just keeps growing so you can keep cooking
           new dishes everyday.
         </p>
         <p>
-          And, just in case the Daily Recipe doesn't inspire you today, you can
-          click the Suggest More Recipes button to see some options. We're
+          And, just in case the Featured Recipe doesn't inspire you today, you can
+          use the search feature to see more options. We're
           confident you're going to discover new foods you love EVERYDAY!
         </p>
       </div>
