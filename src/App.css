@@ -130,6 +130,10 @@ input {
   border-style: double;
   display: flex;
 }
+
+ul {
+  color: var(--primary);
+}
 .user-feature {
   background-color: var(--white);
   /* padding: 10px; */

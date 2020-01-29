@@ -3,7 +3,6 @@ import React from 'react';
 const FeaturedInstructions = random => {
   return (
     <div>
-      <h3>Instructions</h3>
       <h4>
         {random.strArea} {random.strMeal}
       </h4>
@@ -26,7 +25,7 @@ const FeaturedInstructions = random => {
             {random.strMeasure5} {random.strIngredient5}
           </li>
         </ul>
-        <h4>Directions</h4>
+        <h4>Instructions</h4>
         <p>{random.strInstructions}</p>
       </div>
     </div>
