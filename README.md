@@ -38,3 +38,38 @@ I decided to start with components I was confident I knew how to code. The _Site
 Next, I added a search feature. User-defined searches are not a feature I included in the initial design, but the api supports search, and as I recently participated in a lab ("Giphy-Searcher") provided by Jennifer Meade where I learned to implement search using an api, I decided it would be wise to start with functionality with which I am familiar. Following the lab approach to start with hard-coded code, I added a variable using two images from the vendor site.
 
 The Giphy-Searcher lab also provided CSS formatting for the search form and results that I decided to use temporarily. This approach helped me get my site with limited features up and running (and attractive!) very quickly. Early success is encouraging. This approach also puts me in "editing mode" which is less daunting than "white board mode."
+
+### Technologies Used
+
+React (using Hooks), CSS Flexbox, Heroku, API key, Github
+
+### Getting Started
+
+1. Go to https://lets-cookapp.herokuapp.com/
+2. To see another recipe, click "Show me another Featured Dish!"
+
+### Personal Acknowledgments
+
+Collaboration is key and the SEIR 129 cohort (aka, instructors and classmates) are amazingly gracious with sharing time and knowledge. With heartfelt thanks, I'd like to acknowledge:
+Jennifer Meade, Hou Chia, Esin Saribudak, Jared Morgan, Jerrica Bobadilla, Chris Wargo, Daisy Yau, Dan Fruth, Ghazal Mansour, Mindy Marmol, Myshawne Stallings, Qusai Fares, Sage Kearney, Tiffany Huddleston, Rixio Barrios
+
+Thanks for the late night to early morning support and for the party spirit everyone brought to this challenging project.
+
+### References
+
+Hours of pouring through online documentation and video tutorials paid off in getting to MVP. Though not all of the references below made it into my code, they provided guidance on this particular coding journey:
+
+**Styling**
+https://css-tricks.com/
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://www.hongkiat.com/blog/moving-css-grid-items/
+https://fonts.google.com/
+
+**Functionality**
+https://www.themealdb.com/api.php
+Giphy-Searcher application by Jennifer Meade  
+https://reactjs.org/  
+https://reactjs.org/docs/hooks-overview.html#state-hook  
+https://www.w3schools.com/  
+https://developer.mozilla.org/en-US/docs/Web/JavaScript  
+https://stackoverflow.com/questions/54099593/ how-can-i-remove-null-elements-in-an-array
