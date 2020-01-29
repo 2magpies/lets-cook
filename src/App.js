@@ -8,6 +8,7 @@ import NextFeature from './components/NextFeature';
 import './App.css';
 import FeaturedDish from './components/FeaturedDish';
 import FeaturedInstructions from './components/FeaturedInstructions';
+import Ingredients from './components/Ingredients';
 
 function App() {
   const searchOptions = {
@@ -95,23 +96,8 @@ function App() {
         {random && (
           <div>
             <h4>Ingredients</h4>
-            <ul>
-              <li>
-                {random.strMeasure1} {random.strIngredient1}
-              </li>
-              <li>
-                {random.strMeasure2} {random.strIngredient2}
-              </li>
-              <li>
-                {random.strMeasure3} {random.strIngredient3}
-              </li>
-              <li>
-                {random.strMeasure4} {random.strIngredient4}
-              </li>
-              <li>
-                {random.strMeasure5} {random.strIngredient5}
-              </li>
-            </ul>
+            <Ingredients meal={random} />
+
             <h4>Instructions</h4>
             <p>{random.strInstructions}</p>
           </div>

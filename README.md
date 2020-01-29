@@ -4,9 +4,9 @@ _All the world loves a good cook_
 
 ### App Description
 
-**_Let’s Cook!_** is for people that love to cook. The application updates daily with a random recipe. The recipes are crowd-sourced and come from all over the world via TheMealDB. Additionally, users have the option to request the app to suggest a different recipe.
+**_Let’s Cook!_** is for people that love to cook. The application automatically features a recipe and provides users the option for the app to suggest a different recipe. The recipes are crowd-sourced and come from all over the world via TheMealDB.
 
-![Let's Cook!](/images/lets-cook.png)
+![Let's Cook!](/public/images/lets-cook.png)
 
 ### Project Description
 
@@ -19,7 +19,7 @@ Our second project in the _General Assembly Software Engineering Immersive_ prog
 4. Must be deployed on Heroku
 
 **Wireframes**
-![Let's Cook!](/images/lets-cook-wireframes.png)
+![Let's Cook!](/public/images/lets-cook-wireframes.png)
 
 **The Search for an API**
 With a tight timeline (1 week sprint) using technologies that are new to me, I followed my instructors advice to find an API source that was not overly complex.  
@@ -31,7 +31,7 @@ Guidelines for deciding on an API to use:
 4. Easy-to-understand documentation (terms of use aren't scary)
 5. Usage fees do not apply
 
-I decided to use the MealDB API. They have a developer test API key that is very easy to use, but limits the APIs you can use. I decided to subscribe as a Patreon Supporter for \$2/month to have access to all of the APIs (which includes additional databases such as the CocktailDB). The Patreon API key also added some complexity that I wanted to force myself to understand and incorporate.
+I decided to use the MealDB API. They have a developer test API key that is very easy to use, but limits the APIs you can use. I decided to subscribe as a Patreon Supporter for \$2/month to have access to all of the APIs (which includes additional databases such as the CocktailDB). The Patreon API key also added some complexity that I wanted to force myself to understand and incorporate.  
 **Coding**
 I decided to start with components I was confident I knew how to code. The _Site Info_ consists of hard-coded content presented in a sidebar.
 
