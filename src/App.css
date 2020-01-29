@@ -120,6 +120,16 @@ input {
   /* grid-column: 2;
   grid-row: 1; */
 }
+
+.instructions {
+  background-color: var(--white);
+  padding: 10px;
+  margin: 5px;
+  width: auto;
+  border-color: var(--primary);
+  border-style: double;
+  display: flex;
+}
 .user-feature {
   background-color: var(--white);
   /* padding: 10px; */

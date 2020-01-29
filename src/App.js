@@ -7,6 +7,7 @@ import RecipeSearchResults from './components/RecipeSearchResults';
 import NextFeature from './components/NextFeature';
 import './App.css';
 import FeaturedDish from './components/FeaturedDish';
+import FeaturedInstructions from './components/FeaturedInstructions';
 
 function App() {
   const searchOptions = {
@@ -87,6 +88,9 @@ function App() {
           </div>
         )}
       </section>
+      <section className="instructions">
+        {random && <FeaturedInstructions random={random} />}
+      </section>
       <section className="user-feature">
         <NextFeature handleNext={handleNext} />
       </section>
@@ -98,7 +102,6 @@ function App() {
         />
         <RecipeSearchResults meals={meals} />
       </section> */}
-      
 
       {/* <Footer /> */}
     </div>
