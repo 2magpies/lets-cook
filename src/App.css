@@ -33,17 +33,26 @@ h1 {
   font-weight: lighter;
   text-align: center;
   color: var(--white);
-  background-color: #532c3e;
+  background-color: var(--primary);
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
 h2 {
-  color: #5e0f23;
+  color: var(--primary);
 }
 
+h3,
+h4 {
+  color: var(--secondary);
+  text-align: center;
+}
+
+h6 {
+  color: var(--neutral-light);
+}
 p {
-  color: var(--);
+  color: var(--secondary);
 }
 
 button {
@@ -52,11 +61,14 @@ button {
   color: var(--secondary-light);
   padding: 3px;
   margin-left: 5px;
+  height: 40px;
 }
 
 input {
   border-color: var(--secondary);
-  color: var(--secondary-light);
+  text-color: var(--white);
+  height: 40px;
+  background-color: var(--secondary-light);
 }
 .container {
   display: flex;
@@ -81,4 +93,75 @@ input {
   width: 200px;
   height: 200px;
   margin: auto;
+}
+
+.siteinfo {
+  background-color: var(--white);
+  padding: 10px;
+  margin: 10px;
+  border-color: var(--primary);
+  border-style: double;
+}
+
+.user-search {
+  background-color: var(--white);
+  padding: 10px;
+  margin: 10px;
+  width: 400px;
+  border-color: var(--primary);
+  border-style: double;
+}
+.user-feature {
+  background-color: var(--white);
+  padding: 10px;
+  margin: 10px;
+  width: 400px;
+  border-color: var(--primary);
+  border-style: double;
+}
+
+.featured {
+  background-color: var(--white);
+  padding: 10px;
+  margin: 10px;
+  width: 400px;
+  border-color: var(--primary);
+  border-style: double;
+  display: flex;
+  justify-items: center;
+}
+
+/* following referenced from: https://css-tricks.com/snippets/css/css-grid-starter-layouts/ */
+
+.grid {
+  display: grid;
+  grid-template-columns: 150px auto 150px;
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 1em;
+}
+
+header,
+aside,
+article,
+footer {
+  background: #eaeaea;
+  padding: 1em;
+}
+
+header,
+footer {
+  grid-column: 1 / 4;
+}
+
+/* Demo Specific Styles */
+body {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+
+.grid > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import SiteInfo from './components/SiteInfo';
 import RecipeSearchForm from './components/RecipeSearchForm';
 import RecipeSearchResults from './components/RecipeSearchResults';
+import NextFeature from './components/NextFeature';
 import './App.css';
 import FeaturedDish from './components/FeaturedDish';
 
@@ -60,26 +63,42 @@ function App() {
     event.preventDefault();
     getMeals(searchString);
   }
+
+  function handleNext(event) {
+    event.preventDefault();
+    getRandom();
+  }
+
   return (
-    <div className="parent">
+    <div>
+      <Header />
+
       <SiteInfo />
-      <RecipeSearchForm
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-        searchString={searchString}
-      />
-      <RecipeSearchResults meals={meals} />
+      <section className="user-search">
+        <RecipeSearchForm
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          searchString={searchString}
+        />
+        <RecipeSearchResults meals={meals} />
+      </section>
+      <section className="user-feature">
+        <NextFeature handleNext={handleNext} />
+      </section>
       {/* {random && <FeaturedDish random={random} />} */}
-      {random && (
-        <div>
-          <h4>Featured Dish</h4>
-          <img src={random.strMealThumb} alt={random.strMeal} width="300" />
-          <h3>
-            {random.strArea} {random.strMeal}
-          </h3>
-          <p>{random.strCategory}</p>
-        </div>
-      )}
+      <section className="featured">
+        {random && (
+          <div>
+            <h4>Featured Dish</h4>
+            <img src={random.strMealThumb} alt={random.strMeal} width="300" />
+            <h3>
+              {random.strArea} {random.strMeal}
+            </h3>
+            <p>Category: {random.strCategory}</p>
+          </div>
+        )}
+      </section>
+      <Footer />
     </div>
   );
 }
