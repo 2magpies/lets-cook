@@ -10,7 +10,8 @@ _All the world loves a good cook_
 
 ### Project Description
 
-**Requirements**
+#### Requirements
+
 Our second project in the _General Assembly Software Engineering Immersive_ program presented me with four key challenges:
 
 1. Must only use React for DOM manipulation
@@ -18,10 +19,12 @@ Our second project in the _General Assembly Software Engineering Immersive_ prog
 3. Must use Flexbox or CSS Grid for layout
 4. Must be deployed on Heroku
 
-**Wireframes**  
+#### Wireframes
+
 ![Let's Cook!](/public/images/lets-cook-wireframes.png)
 
-**The Search for an API**  
+#### The Search for an API
+
 With a tight timeline (1 week sprint) using technologies that are new to me, I followed my instructors advice to find an API source that was not overly complex.  
 Guidelines for deciding on an API to use:
 
@@ -31,8 +34,10 @@ Guidelines for deciding on an API to use:
 4. Easy-to-understand documentation (terms of use aren't scary)
 5. Usage fees do not apply
 
-I decided to use the MealDB API. They have a developer test API key that is very easy to use, but limits the APIs you can use. I decided to subscribe as a Patreon Supporter for \$2/month to have access to all of the APIs (which includes additional databases such as the CocktailDB). The Patreon API key also added some complexity that I wanted to force myself to understand and incorporate.  
-**Coding**  
+I decided to use the MealDB API. They have a developer test API key that is very easy to use, but limits the APIs you can use. I decided to subscribe as a Patreon Supporter for \$2/month to have access to all of the APIs (which includes additional databases such as the CocktailDB). The Patreon API key also added some complexity that I wanted to force myself to understand and incorporate.
+
+#### Coding
+
 I decided to start with components I was confident I knew how to code. The _Site Info_ consists of hard-coded content presented in a sidebar.
 
 Next, I added a search feature. User-defined searches are not a feature I included in the initial design, but the api supports search, and as I recently participated in a lab ("Giphy-Searcher") provided by Jennifer Meade where I learned to implement search using an api, I decided it would be wise to start with functionality with which I am familiar. Following the lab approach to start with hard-coded code, I added a variable using two images from the vendor site.
@@ -59,13 +64,15 @@ Thanks for the late night to early morning support and for the party spirit ever
 
 Hours of pouring through online documentation and video tutorials paid off in getting to MVP. Though not all of the references below made it into my code, they provided guidance on this particular coding journey:
 
-**Styling**  
+#### Styling
+
 https://css-tricks.com/
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 https://www.hongkiat.com/blog/moving-css-grid-items/
 https://fonts.google.com/
 
-**Functionality**  
+#### Functionality
+
 https://www.themealdb.com/api.php
 Giphy-Searcher application by Jennifer Meade  
 https://reactjs.org/  
@@ -73,3 +80,6 @@ https://reactjs.org/docs/hooks-overview.html#state-hook
 https://www.w3schools.com/  
 https://developer.mozilla.org/en-US/docs/Web/JavaScript  
 https://stackoverflow.com/questions/54099593/ how-can-i-remove-null-elements-in-an-array
+
+###Contribution Guidelines
+Everyone is welcome to help me improve this project. Please, if you have a suggestion, find a bug, or just want to brainstorm, open an issue and share your ideas.

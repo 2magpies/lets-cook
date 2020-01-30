@@ -1,5 +1,7 @@
 import React from 'react';
 
+//FUTURE: use: refactor to align in look and feel with NextFeature; dependencies: refactor RecipeSearchResults refactoring
+
 function RecipeSearchForm(props) {
   // Destructure props object
   const { handleSubmit, handleChange, searchString } = props;

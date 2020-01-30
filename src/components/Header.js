@@ -4,7 +4,7 @@ function Header() {
   return (
     <div>
       <section className="banner">
-        <h1> Let's Cook</h1>
+        <h1> Let's Cook!</h1>
       </section>
     </div>
   );

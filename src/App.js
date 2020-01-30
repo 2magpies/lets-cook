@@ -73,10 +73,13 @@ function App() {
 
   return (
     <div className="grid">
-      <Header className="banner" />
-
-      <SiteInfo />
+      <section>
+        <Header className="banner" />
+        <SiteInfo />
+      </section>
+      
       {/* {random && <FeaturedDish random={random} />} */}
+      <section>
       <section className="featured">
         {random && (
           <div>
@@ -88,6 +91,11 @@ function App() {
             <p>Category: {random.strCategory}</p>
           </div>
         )}
+     
+      </section>
+      <section className="user-feature">
+        <NextFeature handleNext={handleNext} />
+      </section>
       </section>
       {/* <section className="instructions">
         {random && <FeaturedInstructions random={random} />}
@@ -103,9 +111,7 @@ function App() {
           </div>
         )}
       </section>
-      <section className="user-feature">
-        <NextFeature handleNext={handleNext} />
-      </section>
+
       {/* <section className="user-search">
         <RecipeSearchForm
           handleChange={handleChange}

@@ -76,8 +76,9 @@ input {
 
 .grid {
   display: flex;
-  /* flex-direction: row; */
-  flex-wrap: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+
   /* justify-content: space-evenly; */
   /* grid-template-areas: 'left center right';
   grid-template-columns: repeat(3, 1fr);
@@ -86,24 +87,30 @@ input {
   background-color: var(--secondary);
 }
 
-.grid > * {
+/* .grid > * {
   flex: 1 100%;
-}
+} */
 
 /* style banner */
 .banner {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
+  flex-flow: wrap;
+  flex-basis: 100%;
+  /* order: 1; */
+  width: 300px;
+  
 }
 
 .siteinfo {
   background-color: var(--white);
   padding: 10px;
   margin: 5px;
-  width: auto;
+  width: 300px;
   border-color: var(--primary);
   border-style: double;
+  display: flex;
+  order: 1;
+  
   /* grid-area: left;
   grid-column: 1;
   grid-row: 2; */
@@ -113,10 +120,12 @@ input {
   padding: 10px;
   margin: 5px;
   width: auto;
+  height: 600px;
   border-color: var(--primary);
   border-style: double;
   display: flex;
   text-align: center;
+  order: 1;
   /* grid-column: 2;
   grid-row: 1; */
 }
@@ -125,10 +134,11 @@ input {
   background-color: var(--white);
   padding: 10px;
   margin: 5px;
-  width: auto;
+  width: 400px;
   border-color: var(--primary);
   border-style: double;
   display: flex;
+  order: 1;
 }
 
 ul {
@@ -139,10 +149,11 @@ ul {
   /* padding: 10px; */
   margin: 5px;
   width: auto;
-  height: 150px;
+  height: 200px;
   border-color: var(--primary);
   border-style: double;
   text-align: center;
+  order: 2;
   /* grid-area: center;
   grid-column: 2;
   grid-row: 2; */
