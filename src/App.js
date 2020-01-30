@@ -22,29 +22,28 @@ function App() {
   const [lastSearch, setLastSearch] = useState('');
   const [random, setRandom] = useState(null);
 
-  useEffect(() => {
-    getMeals(searchString);
-  }, []);
+  // useEffect(() => {
+  //   getMeals(searchString);
+  // }, []);
 
   useEffect(() => {
     getRandom();
   }, []);
 
-  function getMeals(searchString) {
-    /* Build a URL from the searchOptions object */
-    const url = `${searchOptions.api}${searchOptions.endpoint}${searchString}`;
-    fetch(url)
-      .then(response => response.json())
-      .then(response => {
-        setMeals(response.meals);
-        console.log(response);
-        //   Set the lastSearch to the searchString value
-        setLastSearch(searchString);
-        //   Set the searchString in state to an empty string
-        setSearchString('');
-      })
-      .catch(console.error);
-  }
+  // function getMeals(searchString) {
+  //   /* Build a URL from the searchOptions object */
+  //   const url = `${searchOptions.api}${searchOptions.endpoint}${searchString}`;
+  //   fetch(url)
+  //     .then(response => response.json())
+  //     .then(response => {
+  //       setMeals(response.meals);
+  //       //   Set the lastSearch to the searchString value
+  //       setLastSearch(searchString);
+  //       //   Set the searchString in state to an empty string
+  //       setSearchString('');
+  //     })
+  //     .catch(console.error);
+  // }
 
   function getRandom() {
     /* Build a URL from the url object */
@@ -52,19 +51,40 @@ function App() {
     fetch(randomUrl)
       .then(response => response.json())
       .then(response => {
-        setRandom(response.meals[0]);
-        console.log(response);
+        // 1. create an empty array to hold all of the ingredients so that you can use map to display them easily.
+        const ingredientList = [];
+
+        // 2. create a counter (an index value to use in a while loop) and start it at 1
+        const meal = response.meals[0];
+        let i = 1;
+
+        // 3. create a while loop, the condition will be "so long as there is a value in meal['strIngredient' + i ]
+
+        // 3a. store the name of the ingredient
+
+        while (meal['strIngredient' + i]) {
+          const name = meal['strIngredient' + i];
+          const quantity = meal['strMeasure' + i];
+          ingredientList.push(quantity + ' ' + name);
+
+          i++;
+        }
+        meal.ingredients = ingredientList;
+        return meal;
+      })
+      .then(meal => {
+        setRandom(meal);
       })
       .catch(console.error);
   }
-  function handleChange(event) {
-    setSearchString(event.target.value);
-  }
+  // function handleChange(event) {
+  //   setSearchString(event.target.value);
+  // }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    getMeals(searchString);
-  }
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  //   getMeals(searchString);
+  // }
 
   function handleNext(event) {
     event.preventDefault();
@@ -77,25 +97,24 @@ function App() {
         <Header className="banner" />
         <SiteInfo />
       </section>
-      
+
       {/* {random && <FeaturedDish random={random} />} */}
       <section>
-      <section className="featured">
-        {random && (
-          <div>
-            <h2>Featured Dish</h2>
-            <img src={random.strMealThumb} alt={random.strMeal} width="300" />
-            <h3>
-              {random.strArea} {random.strMeal}
-            </h3>
-            <p>Category: {random.strCategory}</p>
-          </div>
-        )}
-     
-      </section>
-      <section className="user-feature">
-        <NextFeature handleNext={handleNext} />
-      </section>
+        <section className="featured">
+          {random && (
+            <div>
+              <h2>Featured Dish</h2>
+              <img src={random.strMealThumb} alt={random.strMeal} width="300" />
+              <h3>
+                {random.strArea} {random.strMeal}
+              </h3>
+              <p>Category: {random.strCategory}</p>
+            </div>
+          )}
+        </section>
+        <section className="user-feature">
+          <NextFeature handleNext={handleNext} />
+        </section>
       </section>
       {/* <section className="instructions">
         {random && <FeaturedInstructions random={random} />}
@@ -104,7 +123,11 @@ function App() {
         {random && (
           <div>
             <h4>Ingredients</h4>
-            <Ingredients meal={random} />
+            <ul>
+              {random.ingredients.map(item => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
 
             <h4>Instructions</h4>
             <p>{random.strInstructions}</p>
@@ -125,5 +148,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

@@ -6,7 +6,7 @@ _All the world loves a good cook_
 
 **_Let’s Cook!_** is for people that love to cook. The application automatically features a recipe and provides users the option for the app to suggest a different recipe. The recipes are crowd-sourced and come from all over the world via TheMealDB.
 
-![Let's Cook!](/public/images/lets-cook.png)
+![Let's Cook!](/public/images/lets-cook-v1.png)
 
 ### Project Description
 
