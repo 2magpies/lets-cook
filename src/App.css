@@ -55,8 +55,9 @@ p {
 }
 
 button {
-  background-color: var(--secondary);
-  border-color: var(--white);
+  background-color: var(--zinger);
+  border-color: var(--primary);
+  border-style: none;
   color: var(--secondary-light);
   padding: 3px;
   margin-left: 5px;
@@ -64,8 +65,8 @@ button {
 }
 
 input {
-  border-color: var(--secondary);
-  text-color: var(--white);
+  border-color: var(--zinger);
+  color: var(--white);
   height: 40px;
   background-color: var(--secondary-light);
 }
@@ -98,7 +99,6 @@ input {
   flex-basis: 100%;
   /* order: 1; */
   width: 300px;
-  
 }
 
 .siteinfo {
@@ -110,7 +110,7 @@ input {
   border-style: double;
   display: flex;
   order: 1;
-  
+
   /* grid-area: left;
   grid-column: 1;
   grid-row: 2; */
