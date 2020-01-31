@@ -13,13 +13,12 @@ const RecipeSearchResults = ({ meals }) => {
     <div className="child">
       {meals.map(recipe => (
         <section key={recipe.idMeal} className="">
-          <h4>
-            {recipe.strArea} {recipe.strMeal}
-          </h4>
+          <h4>{recipe.strMeal}</h4>
           <img src={recipe.strMealThumb} alt={recipe.strMeal} width="200" />
-          <p>{recipe.strCategory}</p>
-          {/* <Ingredients recipe={recipe} />
-          <p className="instructions">{recipe.strInstructions}</p> */}
+          <p>Cuisine: {recipe.strArea}</p>
+          <p>Category: {recipe.strCategory}</p>
+          <Ingredients recipe={recipe} />
+          <p className="instructions">{recipe.strInstructions}</p>
         </section>
       ))}
     </div>

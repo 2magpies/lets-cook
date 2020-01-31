@@ -41,13 +41,13 @@ function SearchPage() {
   }
 
   return (
-    <div className="grid">
+    <div className="search-panel">
       <RecipeSearchForm
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         searchString={searchString}
       />
-      <section className="search-panel">
+      <section>
         <RecipeSearchResults meals={meals} />
       </section>
     </div>

@@ -55,9 +55,8 @@ function Home() {
             <div>
               <h2>Featured Dish</h2>
               <img src={random.strMealThumb} alt={random.strMeal} width="300" />
-              <h3>
-                {random.strArea} {random.strMeal}
-              </h3>
+              <h3>{random.strMeal}</h3>
+              <p>Cuisine: {random.strArea}</p>
               <p>Category: {random.strCategory}</p>
             </div>
           )}
@@ -73,6 +72,7 @@ function Home() {
       <section className="instructions">
         {random && (
           <div>
+            <h3>{random.strMeal}</h3>
             <h4>Ingredients</h4>
             <ul>
               {random.ingredients.map(item => (

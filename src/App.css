@@ -128,6 +128,7 @@ input {
 
 ul {
   color: var(--primary);
+  text-align: start;
 }
 .user-feature {
   background-color: var(--white);
@@ -167,10 +168,6 @@ ul {
   border-color: var(--primary);
   border-style: double;
   display: flex;
+  flex-direction: column;
   text-align: center;
-}
-
-.ingredients {
-  display: flex;
-  text-align: left;
 }
