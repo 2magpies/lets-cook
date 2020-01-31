@@ -25,3 +25,5 @@ function App() {
   );
 }
 export default App;
+
+//Qusai helped me refactor components to support react-router-dom so I could create a separate view for search feature (formerly all of the code in Home component was on App.js)

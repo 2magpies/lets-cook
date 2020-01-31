@@ -59,6 +59,7 @@ button {
   border-color: var(--primary);
   border-style: none;
   color: var(--secondary-light);
+  text-decoration: none;
   padding: 3px;
   margin-left: 5px;
   height: 40px;
@@ -78,26 +79,16 @@ input {
 .grid {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-
-  /* justify-content: space-evenly; */
-  /* grid-template-areas: 'left center right';
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 5px; */
-  /* width: 360px; */
+  flex-wrap: row wrap;
   background-color: var(--secondary);
 }
-
-/* .grid > * {
-  flex: 1 100%;
-} */
 
 /* style banner */
 .banner {
   display: flex;
   flex-flow: wrap;
   flex-basis: 100%;
-  /* order: 1; */
+  order: 1;
   width: 300px;
 }
 
@@ -110,11 +101,8 @@ input {
   border-style: double;
   display: flex;
   order: 1;
-
-  /* grid-area: left;
-  grid-column: 1;
-  grid-row: 2; */
 }
+
 .featured {
   background-color: var(--white);
   padding: 10px;
@@ -125,9 +113,7 @@ input {
   border-style: double;
   display: flex;
   text-align: center;
-  order: 1;
-  /* grid-column: 2;
-  grid-row: 1; */
+  order: 2;
 }
 
 .instructions {
@@ -138,7 +124,7 @@ input {
   border-color: var(--primary);
   border-style: double;
   display: flex;
-  order: 1;
+  order: 4;
 }
 
 ul {
@@ -146,7 +132,6 @@ ul {
 }
 .user-feature {
   background-color: var(--white);
-  /* padding: 10px; */
   margin: 5px;
   width: auto;
   height: 200px;
@@ -154,20 +139,34 @@ ul {
   border-style: double;
   text-align: center;
   order: 2;
-  /* grid-area: center;
-  grid-column: 2;
-  grid-row: 2; */
+}
+
+.favorite-form {
+  background-color: var(--white);
+  margin: 5px;
+  width: auto;
+  height: 200px;
+  border-color: var(--primary);
+  border-style: double;
+  text-align: center;
+  order: 2;
 }
 
 .user-search {
   background-color: var(--white);
   padding: 10px;
   margin: 10px;
-  width: 400px;
-  height: 125px;
+  width: auto;
   border-color: var(--primary);
   border-style: double;
-  /* grid-area: right;
-  grid-column: 3;
-  grid-row: 1; */
+}
+.searchpanel {
+  background-color: var(--white);
+  padding: 10px;
+  margin: 5px;
+  border-color: var(--primary);
+  border-style: double;
+  display: flex;
+  text-align: center;
+  /* order: 1; */
 }

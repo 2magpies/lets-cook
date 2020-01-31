@@ -15,7 +15,7 @@ function RecipeSearchForm(props) {
         onChange={handleChange}
         value={searchString}
       />
-      <button type="submit">Find me a recipe!</button>
+      <button type="submit">Search</button>
     </form>
   );
 }

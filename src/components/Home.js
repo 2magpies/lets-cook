@@ -65,7 +65,7 @@ function Home() {
         <section className="user-feature">
           <NextFeature handleNext={handleNext} />
         </section>
-        <section className="user-feature">
+        <section className="favorite-form">
           <FindFavorite />
         </section>
       </section>

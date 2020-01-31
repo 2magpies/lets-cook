@@ -18,9 +18,9 @@ function SearchPage() {
   }, []);
 
   function getMeals(searchString) {
-    //     /* Build a URL from the searchOptions object */
-    const url = `${searchOptions.api}${searchOptions.endpoint}${searchString}`;
-    fetch(url)
+    /* Build a URL from the searchOptions object */
+      const url = `${searchOptions.api}${searchOptions.endpoint}${searchString}`;
+      fetch(url)
       .then(response => response.json())
       .then(response => {
         setMeals(response.meals);
@@ -42,15 +42,12 @@ function SearchPage() {
 
   return (
     <div>
-      <section className="tbd">
-        <h2> Find My Favorite Recipe!</h2>
-      </section>
+      <RecipeSearchForm
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        searchString={searchString}
+      />
       <section className="user-search">
-        <RecipeSearchForm
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-          searchString={searchString}
-        />
         <RecipeSearchResults meals={meals} />
       </section>
     </div>

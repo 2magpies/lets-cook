@@ -1,4 +1,5 @@
 import React from 'react';
+import Ingredients from './Ingredients';
 
 //FUTURE: use: refactor to align in look and feel with NextFeature; dependencies: refactor RecipeSearchResults refactoring
 
@@ -11,17 +12,17 @@ const RecipeSearchResults = ({ meals }) => {
   return (
     <div className="child">
       {meals.map(recipe => (
-        <div key={recipe.idMeal} className="thumb">
-          <img src={recipe.strMealThumb} alt={recipe.strMeal} width="300" />
+        <section key={recipe.idMeal} className="">
           <h4>
             {recipe.strArea} {recipe.strMeal}
           </h4>
-          {/* future: reuse Ingredients.js functionality here */}
+          <img src={recipe.strMealThumb} alt={recipe.strMeal} width="200" />
+          <p>{recipe.strCategory}</p>
+          <Ingredients recipe={recipe} />
           <p className="instructions">{recipe.strInstructions}</p>
-        </div>
+        </section>
       ))}
     </div>
   );
 };
-
 export default RecipeSearchResults;
