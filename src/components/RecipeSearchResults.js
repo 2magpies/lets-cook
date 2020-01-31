@@ -18,8 +18,8 @@ const RecipeSearchResults = ({ meals }) => {
           </h4>
           <img src={recipe.strMealThumb} alt={recipe.strMeal} width="200" />
           <p>{recipe.strCategory}</p>
-          <Ingredients recipe={recipe} />
-          <p className="instructions">{recipe.strInstructions}</p>
+          {/* <Ingredients recipe={recipe} />
+          <p className="instructions">{recipe.strInstructions}</p> */}
         </section>
       ))}
     </div>

@@ -71,7 +71,6 @@ input {
   background-color: var(--secondary-light);
 }
 
-
 /* some of the following referenced from: https://css-tricks.com and https://www.hongkiat.com/blog/moving-css-grid-items */
 
 /* GRID styling */
@@ -160,13 +159,18 @@ ul {
   border-color: var(--primary);
   border-style: double;
 }
-.searchpanel {
+.search-panel {
   background-color: var(--white);
   padding: 10px;
   margin: 5px;
+  widows: auto;
   border-color: var(--primary);
   border-style: double;
   display: flex;
   text-align: center;
-  /* order: 1; */
+}
+
+.ingredients {
+  display: flex;
+  text-align: left;
 }

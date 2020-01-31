@@ -19,8 +19,8 @@ function SearchPage() {
 
   function getMeals(searchString) {
     /* Build a URL from the searchOptions object */
-      const url = `${searchOptions.api}${searchOptions.endpoint}${searchString}`;
-      fetch(url)
+    const url = `${searchOptions.api}${searchOptions.endpoint}${searchString}`;
+    fetch(url)
       .then(response => response.json())
       .then(response => {
         setMeals(response.meals);
@@ -47,7 +47,7 @@ function SearchPage() {
         handleSubmit={handleSubmit}
         searchString={searchString}
       />
-      <section className="user-search">
+      <section className="search-panel">
         <RecipeSearchResults meals={meals} />
       </section>
     </div>
