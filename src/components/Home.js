@@ -90,3 +90,5 @@ function Home() {
 }
 
 export default Home;
+//Hou Chia helped me code the functions in this page
+//I consulted Jennifer Meade to determine best approach to render a view just for the search feature (SearchPage.js); she explained steps to use react-router-dom, to move the App.js functions to a new component, Home.js

@@ -1,8 +1,6 @@
 import React from 'react';
 import Ingredients from './Ingredients';
 
-//FUTURE: use: refactor to align in look and feel with NextFeature; dependencies: refactor RecipeSearchResults refactoring
-
 const RecipeSearchResults = ({ meals }) => {
   // return early if there are no meals
   if (!meals.length) {
@@ -25,3 +23,4 @@ const RecipeSearchResults = ({ meals }) => {
   );
 };
 export default RecipeSearchResults;
+// Referred to Giphy-Searcher by Jennifer Meade 

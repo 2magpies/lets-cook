@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 function Ingredients(props) {
   const meal = props.recipe;
   const [ingredients, setIngredients] = useState([]);
-  console.log(meal);
+
   useEffect(() => {
     // 1. create an empty array to hold all of the ingredients so that you can use map to display them easily.
     const ingredientList = [];
