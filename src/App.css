@@ -67,10 +67,10 @@ button {
 
 input {
   border-color: var(--zinger);
-  color: var(--white);
   height: 40px;
   background-color: var(--secondary-light);
 }
+
 
 /* some of the following referenced from: https://css-tricks.com and https://www.hongkiat.com/blog/moving-css-grid-items */
 

@@ -41,7 +41,7 @@ function SearchPage() {
   }
 
   return (
-    <div>
+    <div className="grid">
       <RecipeSearchForm
         handleChange={handleChange}
         handleSubmit={handleSubmit}

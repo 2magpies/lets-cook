@@ -11,7 +11,9 @@ function App() {
   return (
     <div className="grid">
       <section>
-        <Header className="banner" />
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <Header className="banner" />
+        </Link>
         <SiteInfo />
       </section>
 

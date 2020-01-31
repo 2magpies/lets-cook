@@ -8,7 +8,7 @@ function FindFavorite(props) {
     <div>
       <h2>Looking for a Favorite Dish?</h2>
       <button>
-        <Link to={`/search`}>Let me search!</Link>
+        <Link to={`/search`} style={{ textDecoration: 'none', color: "var(--)" }}>Let me search!</Link>
       </button>
     </div>
   );

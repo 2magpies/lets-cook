@@ -48,7 +48,7 @@ function Home() {
     getRandom();
   }
   return (
-    <div>
+    <div className="grid">
       <section>
         <section className="featured">
           {random && (
