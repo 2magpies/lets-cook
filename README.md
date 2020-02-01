@@ -42,7 +42,15 @@ I decided to start with components I was confident I knew how to code. The _Site
 
 Next, I added a search feature. User-defined searches are not a feature I included in the initial design, but the api supports search, and as I recently participated in a lab ("Giphy-Searcher") provided by Jennifer Meade where I learned to implement search using an api, I decided it would be wise to start with functionality with which I am familiar. Following the lab approach to start with hard-coded code, I added a variable using two images from the vendor site.
 
-The Giphy-Searcher lab also provided CSS formatting for the search form and results that I decided to use temporarily. This approach helped me get my site with limited features up and running (and attractive!) very quickly. Early success is encouraging. This approach also puts me in "editing mode" which is less daunting than "white board mode."
+The _Giphy-Searcher_ lab also provided CSS formatting for the search form and results that I decided to use temporarily. This approach helped me get my site with limited features up and running very quickly. Early success is encouraging. This approach also puts me in "editing mode" which is less daunting than "white board mode."
+
+I created components to use the api call to find a random recipe and render it as the Featured Dish. To improve look-n-feel, I incorporated _react-router-dom_ and refactored the code to support two views, one for the Featured Dish, and one for the user-search.
+
+#### CSS
+
+Initially, I used _CSS Grid_ to manage the layout to the Featured Dish view. Not pleased with the results, I decided to use _CSS Flex_.
+
+I created a color palette using _var(--primary | secondary | ...)_. This approach to managing color-scheme proved very helpful. When my buttons seemed "lost in the content," I was able to very easily set them to the "zinger" from the palette to draw user-focus.
 
 ### Technologies Used
 
@@ -51,7 +59,9 @@ React (using Hooks), CSS Flexbox, Heroku, API key, Github
 ### Getting Started
 
 1. Go to https://lets-cookapp.herokuapp.com/
-2. To see another recipe, click "Show me another Featured Dish!"
+2. To see another recipe, click **Show me another Featured Dish!**
+3. To search for a recipe (just in case you have a favorite from an earlier visit!), click the **Let me search?** button. Then, enter the first letter of the recipe in the search text box, and click the **Search** button.
+4. To return to the _Featured Dish_ view, click **Let's Cook!** in the upper left corner of the page.
 
 ### Personal Acknowledgments
 
