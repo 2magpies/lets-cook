@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import SiteInfo from './components/SiteInfo';
-
 import './App.css';
 import SearchPage from './components/SearchPage';
 import Home from './components/Home';
+import LetsDrink from './components/LetsDrink';
+import FeaturedDrink from './components/FeaturedDrink';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/search" component={SearchPage}></Route>
+          <Route path="/drink" component={FeaturedDrink}></Route>
         </Switch>
       </main>
     </div>

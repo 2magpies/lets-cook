@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NextFeature from './NextFeature';
 import { Link } from 'react-router-dom';
 import FindFavorite from './FindFavorite';
+import LetsDrink from './LetsDrink';
 
 function Home() {
   const [random, setRandom] = useState(null);
@@ -66,6 +67,9 @@ function Home() {
         </section>
         <section className="favorite-form">
           <FindFavorite />
+        </section>
+        <section className="favorite-form">
+          <LetsDrink />
         </section>
       </section>
 
