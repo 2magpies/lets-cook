@@ -6,7 +6,7 @@ function LetsDrink(props) {
   const { onClick } = props;
   return (
     <div>
-      <h2>Want to see our Featured drink?</h2>
+      <h2>Want to try our Featured Drink?</h2>
       <button>
         <Link
           to={`/drink`}
@@ -20,3 +20,4 @@ function LetsDrink(props) {
 }
 
 export default LetsDrink;
+//Sage helped me with link

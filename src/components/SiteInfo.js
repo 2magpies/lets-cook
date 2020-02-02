@@ -16,9 +16,8 @@ function SiteInfo() {
           new dishes everyday.
         </p>
         <p>
-          And, just in case the Featured Dish doesn't inspire you today, you can
-          use the search feature to see more options. We're confident you're
-          going to discover new foods you love EVERYDAY!
+          And, after you've created the Featured Dish, treat yourself to a
+          drink. Just click the Let's Drink! button to see our Featured Drink.
         </p>
       </section>
     </div>

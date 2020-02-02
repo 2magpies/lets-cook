@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import NextFeature from './NextFeature';
 import { Link } from 'react-router-dom';
-import FindFavorite from './FindFavorite';
 import LetsDrink from './LetsDrink';
 
 function Home() {
@@ -64,9 +63,6 @@ function Home() {
         </section>
         <section className="user-feature">
           <NextFeature handleNext={handleNext} />
-        </section>
-        <section className="favorite-form">
-          <FindFavorite />
         </section>
         <section className="favorite-form">
           <LetsDrink />
