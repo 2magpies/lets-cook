@@ -6,7 +6,7 @@ function LetsDrink(props) {
   const { onClick } = props;
   return (
     <div>
-      <h2>Want to try our Featured Drink?</h2>
+      <h2>Ready to Drink?</h2>
       <button>
         <Link
           to={`/drink`}
