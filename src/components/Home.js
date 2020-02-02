@@ -61,7 +61,7 @@ function Home() {
             </div>
           )}
         </section>
-        <section className="user-feature">
+        <section className="favorite-form">
           <NextFeature handleNext={handleNext} />
         </section>
         <section className="favorite-form">

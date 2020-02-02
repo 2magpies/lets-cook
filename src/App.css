@@ -134,7 +134,7 @@ ul {
   background-color: var(--white);
   margin: 5px;
   width: auto;
-  height: 200px;
+  height: 150px;
   border-color: var(--primary);
   border-style: double;
   text-align: center;
@@ -145,7 +145,7 @@ ul {
   background-color: var(--white);
   margin: 5px;
   width: auto;
-  height: 200px;
+  height: 150px;
   border-color: var(--primary);
   border-style: double;
   text-align: center;
