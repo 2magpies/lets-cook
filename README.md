@@ -44,7 +44,7 @@ Next, I added a search feature. User-defined searches are not a feature I includ
 
 The _Giphy-Searcher_ lab also provided CSS formatting for the search form and results that I decided to use temporarily. This approach helped me get my site with limited features up and running very quickly. Early success is encouraging. This approach also puts me in "editing mode" which is less daunting than "white board mode."
 
-I created components to use the api call to find a random recipe and render it as the Featured Dish. To improve look-n-feel, I incorporated _react-router-dom_ and refactored the code to support two views, one for the Featured Dish, and one for the user-search.
+I created components to use the api call to find a random recipe and render it as the Featured Dish. To improve look-n-feel, I incorporated _react-router-dom_ and refactored the code to support two views, one for the Featured Dish, and one for Featured Drink.
 
 #### CSS
 
@@ -60,7 +60,7 @@ React (using Hooks), CSS Flexbox, Heroku, API key, Github
 
 1. Go to https://lets-cookapp.herokuapp.com/
 2. To see another recipe, click **Show me another Featured Dish!**
-3. To search for a recipe (just in case you have a favorite from an earlier visit!), click the **Let me search?** button. Then, enter the first letter of the recipe in the search text box, and click the **Search** button.
+3. To see Featured Drink, click the **Let's Drink!** button.
 4. To return to the _Featured Dish_ view, click **Let's Cook!** in the upper left corner of the page.
 
 ### Personal Acknowledgments
