@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+// Hou comment: remove lines 3-5 since they are not needed
 // import NextFeature from './NextFeature';
 // import { Link } from 'react-router-dom';
 // import FindFavorite from './FindFavorite';
 
+// Hou comment: Nice job using hooks to add state to your functional components throughout your application!
 function FeaturedDrink() {
   const [randomDrink, setRandomDrink] = useState(null);
 
