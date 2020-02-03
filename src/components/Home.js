@@ -47,26 +47,22 @@ function Home() {
     event.preventDefault();
     getRandom();
   }
+
+  // Hou comment: this component suffers from an overuse of <section> HTML tags - regular div tags would do and in some cases, they are not really needed (and I moved the classNames to the component files)
   return (
     <div className="grid">
-      <section>
-        <section className="featured">
-          {random && (
-            <div>
-              <h2>Featured Dish</h2>
-              <img src={random.strMealThumb} alt={random.strMeal} width="300" />
-              <h3>{random.strMeal}</h3>
-              <p>Cuisine: {random.strArea}</p>
-              <p>Category: {random.strCategory}</p>
-            </div>
-          )}
-        </section>
-        <section className="user-feature">
-          <NextFeature handleNext={handleNext} />
-        </section>
-        <section className="favorite-form">
-          <LetsDrink />
-        </section>
+      <section className="featured">
+        {random && (
+          <div>
+            <h2>Featured Dish</h2>
+            <img src={random.strMealThumb} alt={random.strMeal} width="300" />
+            <h3>{random.strMeal}</h3>
+            <p>Cuisine: {random.strArea}</p>
+            <p>Category: {random.strCategory}</p>
+          </div>
+        )}
+        <NextFeature handleNext={handleNext} />
+        <LetsDrink />
       </section>
 
       <section className="instructions">

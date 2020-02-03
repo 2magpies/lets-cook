@@ -6,10 +6,12 @@ import './App.css';
 import Home from './components/Home';
 import FeaturedDrink from './components/FeaturedDrink';
 
+// Hou comment: great job using react router to add navigation to your app!
 function App() {
   return (
     <div className="grid">
       <section>
+        {/* Hou comment: consider putting your css in a separate stylesheet instead of inline for better separation of concerns */}
         <Link to="/" style={{ textDecoration: 'none' }}>
           <Header className="banner" />
         </Link>
@@ -18,7 +20,7 @@ function App() {
 
       <main>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Home}></Route>
           <Route path="/drink" component={FeaturedDrink}></Route>
         </Switch>
       </main>

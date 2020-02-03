@@ -5,11 +5,12 @@ function LetsDrink(props) {
   // Destructure props object
   const { onClick } = props;
   return (
-    <div>
+    <div className="favorite-form">
       <h2>Ready to Drink?</h2>
       <button>
         <Link
           to={`/drink`}
+          // Hou comment: consider moving CSS to a separate file
           style={{ textDecoration: 'none', color: 'var(--)' }}
         >
           Let's drink!
