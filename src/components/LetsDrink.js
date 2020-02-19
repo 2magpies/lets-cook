@@ -7,7 +7,7 @@ function LetsDrink(props) {
   return (
     <div>
       <h2>Ready to Drink?</h2>
-      <button>
+      <button className="btn btn-primary">
         <Link
           to={`/drink`}
           style={{ textDecoration: 'none', color: 'var(--)' }}

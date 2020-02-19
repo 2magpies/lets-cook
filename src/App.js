@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import SiteInfo from './components/SiteInfo';
-import './App.css';
+// import './App.css';
+import './Stylesheet.css';
 import Home from './components/Home';
 import FeaturedDrink from './components/FeaturedDrink';
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/drink" component={FeaturedDrink}></Route>
         </Switch>
       </main>
+      {/* <footer>Photo by Lukas Blazek on Unsplash</footer> */}
     </div>
   );
 }

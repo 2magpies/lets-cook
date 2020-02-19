@@ -2,7 +2,7 @@ import React from 'react';
 
 function SiteInfo() {
   return (
-    <div className="siteinfo">
+    <div className="siteinfo col-1-3 remove-gutter-xs">
       <section>
         <h2> What's cooking?</h2>
         <p>

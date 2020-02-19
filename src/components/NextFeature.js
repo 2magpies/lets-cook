@@ -7,7 +7,7 @@ function NextFeature(props) {
       <div>
           <h2>Prefer something else?</h2>
     <form onSubmit={handleNext}>
-      <button type="submit">Show me another Featured Dish!</button>
+        <button type="submit" className="btn btn-primary">Next Featured Dish!</button>
     </form>
       </div>
   );

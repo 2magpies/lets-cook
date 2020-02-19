@@ -49,42 +49,50 @@ function Home() {
   }
   return (
     <div className="grid">
+      
       <section>
-        <section className="featured">
+        <section className="featured col-1-3 remove-gutter-xs">
           {random && (
             <div>
               <h2>Featured Dish</h2>
-              <img src={random.strMealThumb} alt={random.strMeal} width="300" />
-              <h3>{random.strMeal}</h3>
+              <img src={random.strMealThumb} alt={random.strMeal} />
               <p>Cuisine: {random.strArea}</p>
               <p>Category: {random.strCategory}</p>
             </div>
           )}
         </section>
-        <section className="favorite-form">
-          <NextFeature handleNext={handleNext} />
-        </section>
-        <section className="favorite-form">
-          <LetsDrink />
-        </section>
       </section>
 
-      <section className="instructions">
+      <section className="instructions ">
         {random && (
-          <div>
-            <h3>{random.strMeal}</h3>
+          <div className="col-1-3 remove-gutter-xs">
+            <h2>{random.strMeal}</h2>
+            
             <h4>Ingredients</h4>
             <ul>
               {random.ingredients.map(item => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-
+          </div>
+        )}
+      </section>
+      <section className="instructions ">
+        {random && (
+          <div className="col- remove-gutter-xs">
             <h4>Instructions</h4>
             <p>{random.strInstructions}</p>
           </div>
         )}
       </section>
+
+      <section className="featured-form col-1-2 remove-gutter-xs">
+        <NextFeature handleNext={handleNext} />
+      </section>
+      <section className="featured-form col-1-2 remove-gutter-xs">
+        <LetsDrink />
+      </section>
+      
     </div>
   );
 }

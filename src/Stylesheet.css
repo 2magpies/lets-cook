@@ -1,0 +1,295 @@
+/* Reset Styles */
+@import 'normalize.css';
+
+/*Color List:
+- light blue = 00AEEF;
+- dark blue = 1C75BC
+- green = 8DC63F
+- dark green = 009444
+- orange = F7941E
+- dark orange = F15A29
+- brown = 594a42; */
+
+/* Create color variables */
+:root {
+  --primary: #532c3e;
+  --secondary: #2e4f63;
+  --secondary-light: #dee9f3;
+  --neutral: #8f8f8f;
+  --neutral-light: #bdbdbd;
+  --white: #fff;
+  --zinger: #de6663;
+}
+
+/* Change all elements to use border-box*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Theme Styles */
+.background-primary {
+  background: #f7941e; /*Orange*/
+}
+
+.background-secondary {
+  background: #00aeef; /*Blue*/
+}
+
+.background-tertiary {
+  background: #8dc63f; /*Green*/
+}
+
+.background-quinary {
+  background: #e7e1d7;
+}
+
+/* Base Styles */
+body {
+  color: #414042;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  color: #8dc63f;
+  font-weight: bold;
+  /* font-family: 'Zhi Mang Xing', cursive; */
+  /* font-size: xx-large; */
+  /* font-weight: lighter; */
+}
+h2,
+h3 {
+  font-weight: bold;
+}
+
+a {
+  color: #8dc63f;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 300px;
+  margin-right: auto;
+  border-radius: 3%;
+}
+/* Layout Styles */
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1170px;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+[class*='col-'] {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+/* Media Query EXCLUDES extra small devices and includes small and above */
+@media (min-width: 48em) {
+  [class*='col-'] {
+    float: left;
+  }
+  /* Column Third */
+  .col-1-3 {
+    width: 33.3333%;
+  }
+  /* Column Two Thirds */
+  .col-2-3 {
+    width: 66.6666%;
+  }
+  /* Column One Half */
+  .col-1-2 {
+    width: 50%;
+  }
+  /* Column One Fourth */
+  .col-1-4 {
+    width: 25%;
+  }
+  /* Column One Sixth */
+  .col-1-6 {
+    width: 16.6667%;
+  }
+  /* Empty column */
+  .col-empty {
+    height: 1px;
+  }
+
+  /* Entire column */
+  .col-all {
+    width: 100%;
+  }
+}
+/* Creating two of the same media queries just to keep code easier to read, rather than placing all the style in one. */
+@media (min-width: 48em) {
+  .pull-right-sm {
+    float: right;
+  }
+}
+
+/* Creating media query for extra small devices. Note: This is the size from the last media query minus a pixel. */
+@media only screen and (max-width: 47.9375em) {
+  .remove-gutter-xs {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+/* Modules */
+/* Button Modules */
+.btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 12px 30px;
+  font-size: 1.313em;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.3s ease 0s;
+}
+.btn-primary {
+  background: #8dc63f;
+  border-color: #8dc63f;
+  color: white;
+}
+.btn-nav {
+  color: white;
+}
+
+.btn-hover {
+}
+
+.btn-primary:hover {
+  background: none;
+  border-color: white;
+  text-decoration: none;
+}
+
+/*Header Modules*/
+.header-primary {
+  background: #9b8579;
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+/*Logo Modules*/
+.logo {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.logo-primary {
+  width: 64px;
+  height: 64px;
+}
+
+.logo-primary img {
+  height: 100%;
+}
+
+/*Navigation Modules*/
+.nav > ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.nav-primary {
+  margin-top: 35px;
+}
+
+/*Hero Modules*/
+.hero {
+  text-align: center;
+}
+.hero-primary {
+  background-color: #594a42;
+  color: white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.hero-primary.bg-image > img {
+  opacity: 0.55;
+}
+
+.hero-body {
+  position: relative;
+}
+
+.hero-title {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 2.625em;
+}
+.hero-subtitle {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+.hero-subtitle + button {
+  margin-top: 25px;
+}
+/*Background Modules*/
+.bg-image {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* select the direct img child of .bg-image (so that we can position the image) */
+.bg-image > img {
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  min-width: 100%;
+}
+
+/*Media Object Module*/
+.media,
+.media-body {
+  overflow: hidden;
+}
+
+.media-item {
+  float: left;
+  margin-right: 10px;
+}
+
+.media-item i {
+  color: #594a42;
+  font-size: 5em;
+}
