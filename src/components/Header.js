@@ -9,8 +9,8 @@ function Header() {
         <div className="container">
           <div className="hero-body">
             <h1 className="hero-title">Let's Cook!</h1>
-            <h4 className="hero-subtitle"> Hero Primary Subtitle Content</h4>
-            {/* <button className="btn">Button Text</button> */}
+            {/* <h4 className="hero-subtitle"> Hero Primary Subtitle Content</h4> */}
+
           </div>
         </div>
       </section>

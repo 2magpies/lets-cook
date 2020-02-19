@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 import Header from './components/Header';
-import SiteInfo from './components/SiteInfo';
+import SiteInfo from './components/randomDish/SiteInfo';
 // import './App.css';
 import './Stylesheet.css';
-import Home from './components/Home';
-import FeaturedDrink from './components/FeaturedDrink';
+import Home from './components/randomDish/Home';
+import FeaturedDrink from './components/randomDrink/FeaturedDrink';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Link to="/" style={{ textDecoration: 'none' }}>
           <Header className="banner" />
         </Link>
-        <SiteInfo />
+        {/* <SiteInfo /> */}
       </section>
 
       <main>

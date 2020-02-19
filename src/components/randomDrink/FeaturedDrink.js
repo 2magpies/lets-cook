@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import LetsCook from './LetsCook';
+import LetsCook from '../randomDish/LetsCook';
+import DrinkInfo from './DrinkInfo';
 // import NextFeature from './NextFeature';
 // import { Link } from 'react-router-dom';
 // import FindFavorite from './FindFavorite';
@@ -44,6 +45,7 @@ function FeaturedDrink() {
   }
   return (
     <div className="grid">
+      <DrinkInfo />
       <section>
         <section className="featured">
           {randomDrink && (
@@ -77,14 +79,18 @@ function FeaturedDrink() {
           </div>
         )}
       </section>
-      
-      {/* <section className="featured-form col-1-2 remove-gutter-xs">
+      <section className="background-quinary">
+        <div className="container">
+          <div className="row">
+            {/* <section className="featured-form col-1-2 remove-gutter-xs">
         <NextFeature handleNext={handleNext} />
       </section> */}
-      <section className="featured-form col-1-2 remove-gutter-xs">
-        <LetsCook />
+            <section className="featured-form col-1-2 remove-gutter-xs">
+              <LetsCook />
+            </section>
+          </div>
+        </div>
       </section>
-      
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import NextFeature from './NextFeature';
 import { Link } from 'react-router-dom';
-import LetsDrink from './LetsDrink';
+import LetsDrink from '../randomDrink/LetsDrink';
+import SiteInfo from '../randomDish/SiteInfo';
 
 function Home() {
   const [random, setRandom] = useState(null);
@@ -48,8 +49,9 @@ function Home() {
     getRandom();
   }
   return (
+    <>
     <div className="grid">
-      
+      <SiteInfo />
       <section>
         <section className="featured col-1-3 remove-gutter-xs">
           {random && (
@@ -67,7 +69,7 @@ function Home() {
         {random && (
           <div className="col-1-3 remove-gutter-xs">
             <h2>{random.strMeal}</h2>
-            
+
             <h4>Ingredients</h4>
             <ul>
               {random.ingredients.map(item => (
@@ -85,15 +87,22 @@ function Home() {
           </div>
         )}
       </section>
-
-      <section className="featured-form col-1-2 remove-gutter-xs">
-        <NextFeature handleNext={handleNext} />
-      </section>
-      <section className="featured-form col-1-2 remove-gutter-xs">
-        <LetsDrink />
-      </section>
-      
     </div>
+    <div>
+      <section className="background-quinary">
+        <div className="container">
+          <div className="row">
+            <section className="featured-form col-1-2 remove-gutter-xs">
+              <NextFeature handleNext={handleNext} />
+            </section>
+            <section className="featured-form col-1-2 remove-gutter-xs">
+              <LetsDrink />
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+    </>
   );
 }
 
