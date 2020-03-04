@@ -6,6 +6,7 @@ import SiteInfo from './components/randomDish/SiteInfo';
 import './Stylesheet.css';
 import Home from './components/randomDish/Home';
 import FeaturedDrink from './components/randomDrink/FeaturedDrink';
+// import LoginModal from './components/search/LoginModal';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/drink" component={FeaturedDrink}></Route>
+          {/* <Route path="/login" component={LoginModal}></Route> */}
         </Switch>
       </main>
       {/* <footer>Photo by Lukas Blazek on Unsplash</footer> */}
